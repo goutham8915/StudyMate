@@ -1,4 +1,3 @@
-```javascript
 // Load saved data
 let tasks = JSON.parse(localStorage.getItem("studymateTasks")) || [];
 let notes = JSON.parse(localStorage.getItem("studymateNotes")) || [];
@@ -156,4 +155,3 @@ displayTasks();
 displayNotes();
 updateTimerDisplay();
 document.getElementById("studyTime").textContent = studyMinutes;
-```
