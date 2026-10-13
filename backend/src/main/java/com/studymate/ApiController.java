@@ -1,4 +1,3 @@
-```java
 package com.studymate;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,4 +27,4 @@ public class ApiController {
         );
     }
 }
-```
+
