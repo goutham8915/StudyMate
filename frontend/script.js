@@ -1,3 +1,20 @@
+// StudyMate Java backend URL
+const API_BASE = "https://redesigned-lamp-wrjvjr94qg9q2grjj-8080.app.github.dev";
+
+// Check backend connection
+fetch(`${API_BASE}/api/health`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Backend connection failed");
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("StudyMate backend connected:", data.message);
+    })
+    .catch(error => {
+        console.error("Backend connection error:", error);
+    });
 // Load saved data
 let tasks = JSON.parse(localStorage.getItem("studymateTasks")) || [];
 let notes = JSON.parse(localStorage.getItem("studymateNotes")) || [];
