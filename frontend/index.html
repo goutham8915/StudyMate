@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate | Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>StudyMate</h1>
+        <p>Your personal student productivity hub</p>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#notes">Notes</a>
+        <a href="#timer">Study Timer</a>
+    </nav>
+
+    <main>
+        <section id="dashboard" class="card">
+            <h2>Welcome to StudyMate 👋</h2>
+            <p>Plan smarter. Study better. Achieve more.</p>
+            <div class="stats">
+                <div class="stat">
+                    <h3 id="taskCount">0</h3>
+                    <p>Pending Tasks</p>
+                </div>
+                <div class="stat">
+                    <h3 id="studyTime">0</h3>
+                    <p>Study Minutes</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasks" class="card">
+            <h2>Assignment Planner</h2>
+            <form id="taskForm">
+                <input id="taskTitle" placeholder="Assignment name" required>
+                <input id="taskDate" type="date" required>
+                <button type="submit">Add Task</button>
+            </form>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="notes" class="card">
+            <h2>Notes & Resources</h2>
+            <form id="noteForm">
+                <input id="noteTitle" placeholder="Note title" required>
+                <input id="noteSubject" placeholder="Subject" required>
+                <textarea id="noteContent" placeholder="Write your notes..." required></textarea>
+                <button type="submit">Save Note</button>
+            </form>
+            <div id="noteList"></div>
+        </section>
+
+        <section id="timer" class="card">
+            <h2>Study Timer</h2>
+            <h3 id="timerDisplay">25:00</h3>
+            <button id="startTimer">Start</button>
+            <button id="resetTimer">Reset</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>StudyMate — Made for students, by students.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
